@@ -1,5 +1,4 @@
 const form = document.getElementById("form-atividade");
-const notaFinal = document.getElementById("nota-final");
 let mediaFinal = 0;
 let notas = [];
 let atividades = [];
@@ -56,7 +55,7 @@ form.addEventListener("submit", function(e) {
         const spanAprovado = "<span class='resultado aprovado'>Aprovado</span>";
         const spanReprovado = "<span class='resultado reprovado'>Reprovado</span>";
 
-        notaFinal.innerText = mediaFinal;
+        document.getElementById("nota-final").innerHTML = mediaFinal.toFixed(1);
         document.getElementById("resultado-media-final").innerHTML = mediaFinal >= 7 ? spanAprovado : spanReprovado;
     }
 });
